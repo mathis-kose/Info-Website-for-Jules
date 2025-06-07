@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenovo ThinkPad Vergleich</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ThinkPad Modellübersicht</h1>
+        <nav>
+            <a href="#overview" id="nav-overview" class="active">ThinkPad Übersicht</a>
+            <a href="#guide" id="nav-guide">Kaufanleitung</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="overview">
+            <h2>Lenovo ThinkPad Modelle im Vergleich</h2>
+            <div class="thinkpad-filters">
+                <label for="filter-series">Filter by Series:</label>
+                <select id="filter-series">
+                    <option value="all">All Series</option>
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by">
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <!-- Add price sorting later if feasible -->
+                </select>
+            </div>
+            <div class="thinkpad-grid">
+                <!-- ThinkPads will be dynamically inserted here by script.js -->
+            </div>
+        </section>
+
+        <section id="guide" style="display:none;">
+            <h2>Anleitung: Den besten ThinkPad Deal finden</h2>
+            <p>Als Elektrotechnik-Ingenieur mit Freude an Technikprojekten und dem Wunsch nach optimaler Preis-Leistung, hier mein erprobter Leitfaden, um gebrauchte oder refurbished ThinkPads zu finden, die für anspruchsvolle Aufgaben wie CAD, Programmierung und gelegentliche Simulationen geeignet sind, ohne das Budget unnötig zu sprengen.</p>
+
+            <h3>Schritt 1: Definiere deine Kernanforderungen (Minimalprinzip)</h3>
+            <p><strong>Wofür brauchst du das ThinkPad hauptsächlich?</strong> Sei ehrlich zu dir selbst. Die "nice-to-have" Features treiben den Preis oft unnötig in die Höhe.</p>
+            <ul>
+                <li><strong>CPU:</strong> Intel Core i5 / AMD Ryzen 5 einer relativ aktuellen Generation (siehe Schritt 4) reicht für die meisten E-Technik-Anwendungen oft aus. Ein i7/Ryzen 7 ist toll, aber nur, wenn Budget und konkreter Bedarf (z.B. häufige, komplexe Simulationen) es rechtfertigen.</li>
+                <li><strong>RAM:</strong> Mindestens 16 GB. Für CAD, virtuelle Maschinen oder größere Programmierprojekte sind 32 GB eine komfortable Investition in die Zukunft. Prüfe, ob das Modell aufrüstbar ist!</li>
+                <li><strong>SSD-Speicher:</strong> Mindestens 512 GB NVMe SSD. Die Geschwindigkeit einer NVMe ist spürbar. Achte auf die Möglichkeit, eine zweite SSD einbauen zu können oder die vorhandene leicht zu tauschen.</li>
+                <li><strong>Display:</strong> Mindestens Full HD (1920x1080) IPS-Panel für gute Farb- und Blickwinkelstabilität. Für CAD kann eine höhere Auflösung (QHD/WQXGA) vorteilhaft sein, aber bedenke den Einfluss auf Akkulaufzeit und Preis. Matte Displays sind für lange Arbeitssessions augenfreundlicher.</li>
+                <li><strong>Grafikkarte:</strong> Für Standard-CAD und die meisten E-Technik-Anwendungen reicht die integrierte Intel Iris Xe oder AMD Radeon Graphics. Nur bei professionellem 3D-Rendering oder GPU-intensiven Simulationen ist eine dedizierte NVIDIA Quadro/RTX A-Series (P-Serie ThinkPads) wirklich nötig – diese sind deutlich teurer.</li>
+                <li><strong>Anschlüsse:</strong> USB-C mit Thunderbolt (für Docking Stations und schnelle Datenübertragung), USB-A, HDMI sind meist Standard. Überlege, welche spezifischen Ports du oft brauchst.</li>
+                <li><strong>Akkulaufzeit:</strong> Wichtig, wenn du viel mobil arbeitest. Größere Akkus oder Modelle mit stromsparenden CPUs (z.B. U-Serie von Intel) sind hier im Vorteil.</li>
+            </ul>
+            <p><em>Überlegung für dich als E-Techniker:</em> Brauchst du spezielle Schnittstellen (seriell, GPIB über Adapter etc.)? Planst du, das Gerät mit Messtechnik zu verbinden? Das kann die Auswahl beeinflussen.</p>
+
+            <h3>Schritt 2: Gebraucht oder Refurbished – Die smarte Wahl</h3>
+            <p>Neue ThinkPads sind teuer. Gebrauchte Geräte von Unternehmen (Leasing-Rückläufer) oder professionell refurbished Modelle bieten oft das beste Preis-Leistungs-Verhältnis.</p>
+            <ul>
+                <li><strong>Refurbished:</strong> Oft mit Garantie, gereinigt, getestet. Verschiedene Zustands-Kategorien (A-Ware, B-Ware).</li>
+                <li><strong>Gebraucht von Privat/Firmen:</strong> Potenziell günstiger, aber meist ohne Garantie und mit mehr Risiko. Hier ist genaue Prüfung (Schritt 6) entscheidend.</li>
+            </ul>
+
+            <h3>Schritt 3: Wo suchen? Die besten Quellen</h3>
+            <ul>
+                <li><strong>Spezialisierte Refurbisher:</strong> Luxnote, ITSCO, GreenPanda, Notebookswieneu.de etc. (Suche nach "ThinkPad refurbished Händler"). Bieten oft Garantie und gute Auswahl.</li>
+                <li><strong>eBay & Kleinanzeigen:</strong> Große Auswahl, gute Preise möglich, aber Vorsicht vor Betrug und genaue Prüfung des Verkäufers/Angebots nötig.</li>
+                <li><strong>Lenovo Outlet:</strong> Manchmal gute Deals für neuwertige oder generalüberholte Modelle direkt vom Hersteller.</li>
+                <li><strong>Firmenverkäufe/IT-Auktionen:</strong> Kann man Schnäppchen machen, erfordert aber oft Recherche.</li>
+            </ul>
+
+            <h3>Schritt 4: CPU-Generationen verstehen – Nicht vom Marketing blenden lassen</h3>
+            <p>Ein "Core i7" ist nicht gleich "Core i7". Die Generation ist entscheidend!</p>
+            <ul>
+                <li><strong>Intel:</strong> Ab 8. Generation (z.B. i5-8xxxU) gab es einen Sprung auf 4 Kerne bei den U-Serien CPUs, was einen guten Leistungsschub brachte. 10./11. Gen (i5-10xxxU, i5-11xxxG7) sind solide. 12./13. Gen bieten mit Performance- und Efficiency-Cores eine neue Architektur und mehr Leistung, sind aber teurer.</li>
+                <li><strong>AMD:</strong> Ryzen 4000er Serie (z.B. Ryzen 5 4650U) und neuer (5000er, 6000er) bieten exzellente Performance und oft bessere integrierte Grafik als Intel-Pendants der gleichen Zeit.</li>
+            </ul>
+            <p><em>Tipp:</em> Vergleiche CPU-Benchmarks (z.B. PassMark, Cinebench) spezifischer Modelle, nicht nur Marketing-Namen.</p>
+
+            <h3>Schritt 5: Aufrüstbarkeit prüfen – Ein Muss für Langlebigkeit</h3>
+            <p>Viele ThinkPads (besonders T-, L-, P-Serie) sind gut aufrüstbar. X-Serie und X1 Carbon/Yoga sind oft stärker verlötet.</p>
+            <ul>
+                <li><strong>RAM:</strong> Ist RAM gesockelt oder verlötet? Gibt es freie Slots?</li>
+                <li><strong>SSD:</strong> Standard M.2 NVMe Slot? Platz für eine zweite SSD?</li>
+                <li><strong>WLAN-Karte:</strong> Meist tauschbar, falls man neuere Standards braucht.</li>
+            </ul>
+            <p>Lenovo bietet detaillierte "Hardware Maintenance Manuals" (HMM) für jedes Modell. Unbedingt vor dem Kauf prüfen!</p>
+
+            <h3>Schritt 6: Zustand prüfen – Worauf achten (besonders bei Privatkauf)</h3>
+            <ul>
+                <li><strong>Display:</strong> Pixelfehler, Clouding (helle Flecken), Kratzer, Scharnierfestigkeit.</li>
+                <li><strong>Tastatur & Touchpad:</strong> Funktionieren alle Tasten? Abnutzung? Ghosting?</li>
+                <li><strong>Anschlüsse:</strong> Physische Beschädigungen? Funktionstest (wenn möglich).</li>
+                <li><strong>Gehäuse:</strong> Risse, Brüche, starke Abnutzung.</li>
+                <li><strong>Akku:</strong> Verschleißgrad auslesen (z.B. mit `powercfg /batteryreport` unter Windows oder `upower -i /org/freedesktop/UPower/devices/battery_BAT0` unter Linux). Ein Akkutausch ist oft einfach, kostet aber extra.</li>
+                <li><strong>BIOS/UEFI:</strong> Ist ein Supervisor-Passwort gesetzt, das der Verkäufer nicht kennt? (Computrace aktiviert?). Das kann das Gerät stark einschränken!</li>
+                <li><strong>Geruch:</strong> Rauchergerät? Kann unangenehm sein.</li>
+                <li><strong>Komponenten:</strong> Stimmen die Specs (CPU, RAM, SSD) mit dem Angebot überein? (Tools wie CPU-Z, HWiNFO verwenden).</li>
+            </ul>
+
+            <h3>Schritt 7: Preisverhandlung und Geduld</h3>
+            <p>Vergleiche Preise ähnlicher Modelle. Sei bereit zu verhandeln, besonders bei Privatkäufen mit kleinen Mängeln. Gute Deals erfordern oft Geduld und regelmäßiges Suchen.</p>
+
+            <h3>Spezifische Modellreihen-Überlegungen:</h3>
+            <ul>
+                <li><strong>T-Serie:</strong> Der Allrounder. Robust, gute Tastaturen, oft gut aufrüstbar. (z.B. T480, T490, T14, T16)</li>
+                <li><strong>X1 Carbon/Yoga:</strong> Premium, leicht, dünn. Oft weniger aufrüstbar, teurer. (Achte auf RAM, da oft verlötet)</li>
+                <li><strong>X-Serie (nicht X1):</strong> Kompakter, z.B. X270, X280, X13. Gut für Mobilität.</li>
+                <li><strong>P-Serie:</strong> Mobile Workstations. Leistungsstark, oft mit dedizierter GPU, größer, schwerer, teurer. (z.B. P52, P53, P1, P16)</li>
+                <li><strong>L-Serie:</strong> Günstiger, etwas schwerer/dicker als T-Serie, aber immer noch solide. (z.B. L480, L14)</li>
+                <li><strong>E-Serie:</strong> Budget-orientiert. Verarbeitung nicht ganz auf dem Niveau der anderen Serien.</li>
+            </ul>
+
+            <h3>Zusammenfassung für das schnelle Gehirn:</h3>
+            <ol>
+                <li><strong>Was brauche ich WIRKLICH?</strong> (Minimalprinzip, E-Technik Fokus)</li>
+                <li><strong>Gebraucht/Refurbished?</strong> (Ja, für Preis/Leistung!)</li>
+                <li><strong>Wo suchen?</strong> (Spezialisierte Händler, eBay mit Vorsicht)</li>
+                <li><strong>CPU-Gen?</strong> (Intel 8th+ Gen, AMD Ryzen 4000+)</li>
+                <li><strong>RAM/SSD aufrüstbar?</strong> (HMM checken! Ziel: 16-32GB RAM, 512GB+ NVMe)</li>
+                <li><strong>Zustand checken!</strong> (Display, Tastatur, BIOS, Akku!)</li>
+            </ol>
+            <p>Mit dieser Strategie und deinem technischen Sachverstand wirst du sicher ein ThinkPad finden, das deinen Anforderungen als Elektrotechnik-Ingenieur gerecht wird und dir lange gute Dienste leistet, ohne dein Konto zu plündern. Viel Erfolg bei der Jagd!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ThinkPad Vergleichsportal</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
