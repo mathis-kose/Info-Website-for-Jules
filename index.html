@@ -4,7 +4,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lenovo ThinkPad Vergleich</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #F0F8FF; /* AliceBlue */
+    color: #333;
+    /* Basic pearlescent hint for the body background (optional, can be refined) */
+    background-image: linear-gradient(to bottom right, #F0F8FF, #FFF0F5); /* AliceBlue to LavenderBlush */
+}
+
+nav a.active {
+    /* color: #87CEEB; SkyBlue - already present but ensure it works for active state */
+    font-weight: bold; /* Make active link bolder */
+    border-bottom: 2px solid #87CEEB; /* Underline active link */
+}
+
+.thinkpad-item {
+    /* background-color: #FFFFFF; */ /* Already defined */
+    /* border: 1px solid #ADD8E6; */ /* Already defined */
+    /* border-radius: 8px; */ /* Already defined */
+    /* padding: 1em; */ /* Already defined */
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.05); */ /* Already defined */
+    display: flex; /* Arrange image and details side-by-side */
+    flex-direction: column; /* Stack image on top of details by default */
+    gap: 1em;
+    background-color: #FFFFFF; /* White - Ensure this is explicitly set if base .thinkpad-item was overridden */
+    border: 1px solid #ADD8E6; /* LightBlue - Ensure this is explicitly set */
+    border-radius: 8px; /* Ensure this is explicitly set */
+    padding: 1em; /* Ensure this is explicitly set */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Ensure this is explicitly set */
+}
+
+.thinkpad-item-image-placeholder {
+    width: 100%; /* Adjust as needed, or set a fixed width/height */
+    max-width: 200px; /* Max width for the image placeholder area */
+    height: 150px; /* Fixed height for placeholder */
+    background-color: #E0E0E0; /* Light grey background for placeholder */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 4px;
+    margin: 0 auto; /* Center the placeholder if item is flex-column */
+}
+
+.thinkpad-item-image-placeholder img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* or 'contain' depending on desired placeholder look */
+}
+
+.thinkpad-item-details {
+    flex-grow: 1; /* Details take remaining space if item is flex-row */
+}
+
+.thinkpad-item h3 {
+    font-size: 1.1em !important;
+    margin-top: 0; /* Reset margin if needed */
+    color: #0056b3; /* Darker blue for item titles - ensure this is set */
+}
+
+.thinkpad-item p {
+    font-size: 0.85em !important;
+    margin-bottom: 0.4em !important;
+    line-height: 1.4; /* ensure this is set */
+}
+
+.thinkpad-item strong { /* Copied from global for specificity if needed */
+    color: #333;
+}
+
+
+/* Responsive adjustment for larger screens: image beside text */
+@media (min-width: 600px) {
+    .thinkpad-item {
+        flex-direction: row; /* Image beside text */
+    }
+
+    .thinkpad-item-image-placeholder {
+        width: 150px; /* Fixed width for side image */
+        height: auto; /* Auto height */
+        min-height: 120px; /* Min height */
+        margin: 0; /* Reset margin */
+    }
+}
+
+.no-results {
+    padding: 1em;
+    text-align: center;
+    color: #555;
+    font-style: italic;
+}
+
+
+#guide h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #0056b3; /* Darker blue for guide subheadings */
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #ADD8E6; /* Lighter border for guide subheadings */
+}
+
+#guide p, #guide ul, #guide ol {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+#guide ul, #guide ol {
+    padding-left: 20px;
+}
+
+#guide li {
+    margin-bottom: 0.5em;
+}
+
+#guide strong {
+    color: #333;
+    font-weight: 600;
+}
+
+#guide em {
+    color: #555;
+    font-style: italic;
+}
+
+header {
+    background-color: #FFFFFF; /* White */
+    padding: 1em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    gap: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+nav a:hover, nav a.active {
+    color: #87CEEB; /* SkyBlue */
+}
+
+main {
+    padding: 1em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+h2 {
+    color: #4A4A4A; /* Dark Grey */
+    border-bottom: 2px solid #ADD8E6; /* LightBlue */
+    padding-bottom: 0.3em;
+}
+
+.thinkpad-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1em;
+}
+
+/* Base .thinkpad-item styles that might have been overridden by the flex version if not careful */
+/* The flex version of .thinkpad-item should ideally incorporate these if they were meant to be base */
+/* Forcing them here for the consolidated version. */
+/* .thinkpad-item {
+    background-color: #FFFFFF;
+    border: 1px solid #ADD8E6;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+} */
+
+/* Base .thinkpad-item h3 styles */
+/* .thinkpad-item h3 {
+    margin-top: 0;
+    color: #0056b3;
+} */
+
+/* Base .thinkpad-item p styles */
+/* .thinkpad-item p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+} */
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #FFFFFF; /* White */
+    border-top: 1px solid #E0E0E0; /* Light grey border */
+    font-size: 0.9em;
+    color: #666;
+}
+    </style>
 </head>
 <body>
     <header>
@@ -128,6 +326,183 @@
         <p>&copy; 2024 ThinkPad Vergleichsportal</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+// Keep the existing thinkPads array
+const thinkPads = [
+    {
+        id: 1,
+        name: "ThinkPad T14 Gen 3 (Intel)",
+        series: "T Series",
+        cpu: "Up to 12th Gen Intel Core i7 vPro",
+        ram: "Up to 48GB DDR4",
+        storage: "Up to 2TB PCIe SSD",
+        screenSize: "14 inch",
+        resolution: "Up to WQUXGA (3840 x 2400)",
+        graphics: "Intel Iris Xe Graphics",
+        image: "images/t14_gen3.jpg",
+        priceRange: "€1500-€2500"
+    },
+    {
+        id: 2,
+        name: "ThinkPad X1 Carbon Gen 10",
+        series: "X1 Series",
+        cpu: "Up to 12th Gen Intel Core i7 vPro",
+        ram: "Up to 32GB LPDDR5",
+        storage: "Up to 2TB PCIe SSD",
+        screenSize: "14 inch",
+        resolution: "Up to 2.8K OLED (2880 x 1800)",
+        graphics: "Intel Iris Xe Graphics",
+        image: "images/x1_carbon_gen10.jpg",
+        priceRange: "€1800-€3000"
+    },
+    {
+        id: 3,
+        name: "ThinkPad P16 Gen 1",
+        series: "P Series",
+        cpu: "Up to 12th Gen Intel Core i9 vPro",
+        ram: "Up to 128GB DDR5",
+        storage: "Up to 8TB PCIe SSD (2x 4TB)",
+        screenSize: "16 inch",
+        resolution: "Up to WQUXGA (3840 x 2400)",
+        graphics: "Up to NVIDIA RTX A5500",
+        image: "images/p16_gen1.jpg",
+        priceRange: "€2500-€5000+"
+    },
+    {
+        id: 4,
+        name: "ThinkPad T16 Gen 1 (AMD)",
+        series: "T Series",
+        cpu: "AMD Ryzen PRO 6000 Series",
+        ram: "Up to 32GB DDR4",
+        storage: "Up to 2TB PCIe SSD",
+        screenSize: "16 inch",
+        resolution: "Up to WQXGA (2560 x 1600)",
+        graphics: "Integrated AMD Radeon Graphics",
+        image: "images/t16_amd.jpg",
+        priceRange: "€1400-€2200"
+    }
+];
+
+const thinkpadGrid = document.querySelector('.thinkpad-grid');
+const seriesFilter = document.getElementById('filter-series');
+const sortBy = document.getElementById('sort-by');
+
+function populateSeriesFilter() {
+    if (!seriesFilter) {
+        // console.error("Series filter dropdown not found!"); // Optional: keep for debugging if needed
+        return;
+    }
+    const series = [...new Set(thinkPads.map(p => p.series))];
+    series.forEach(s => {
+        const option = document.createElement('option');
+        option.value = s;
+        option.textContent = s;
+        seriesFilter.appendChild(option);
+    });
+}
+
+function displayThinkPads(padsToDisplay) {
+    if (!thinkpadGrid) {
+        // console.error("ThinkPad grid not found!"); // Optional
+        return;
+    }
+    thinkpadGrid.innerHTML = '';
+
+    const selectedSeries = seriesFilter ? seriesFilter.value : 'all';
+    const sortValue = sortBy ? sortBy.value : 'name-asc';
+
+    let filteredPads = [...padsToDisplay];
+
+    if (selectedSeries !== 'all') {
+        filteredPads = filteredPads.filter(pad => pad.series === selectedSeries);
+    }
+
+    if (sortValue === 'name-asc') {
+        filteredPads.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortValue === 'name-desc') {
+        filteredPads.sort((a, b) => b.name.localeCompare(a.name));
+    }
+
+    if (filteredPads.length === 0) {
+        thinkpadGrid.innerHTML = '<p class="no-results">Keine ThinkPads entsprechen den aktuellen Filterkriterien.</p>';
+        return;
+    }
+
+    filteredPads.forEach(pad => {
+        const item = document.createElement('div');
+        item.className = 'thinkpad-item';
+        item.id = `thinkpad-${pad.id}`;
+        item.innerHTML = `
+            <div class="thinkpad-item-image-placeholder">
+                <img src="${pad.image || ''}" alt="Abbildung von ${pad.name}">
+            </div>
+            <div class="thinkpad-item-details">
+                <h3>${pad.name}</h3>
+                <p><strong>Series:</strong> ${pad.series}</p>
+                <p><strong>CPU:</strong> ${pad.cpu}</p>
+                <p><strong>RAM:</strong> ${pad.ram}</p>
+                <p><strong>Storage:</strong> ${pad.storage}</p>
+                <p><strong>Screen:</strong> ${pad.screenSize || 'N/A'}, ${pad.resolution || 'N/A'}</p>
+                <p><strong>Graphics:</strong> ${pad.graphics || 'N/A'}</p>
+                <p><strong>Price:</strong> ${pad.priceRange || 'N/A'}</p>
+            </div>
+        `;
+        thinkpadGrid.appendChild(item);
+    });
+}
+
+function updateDisplay() {
+    displayThinkPads(thinkPads);
+}
+
+// Event Listeners
+if (seriesFilter) {
+    seriesFilter.addEventListener('change', updateDisplay);
+}
+if (sortBy) {
+    sortBy.addEventListener('change', updateDisplay);
+}
+
+// Navigation Logic
+const navOverview = document.getElementById('nav-overview');
+const navGuide = document.getElementById('nav-guide');
+const overviewSection = document.getElementById('overview');
+const guideSection = document.getElementById('guide');
+
+function showSection(sectionToShow, activeNav) {
+    if (overviewSection) overviewSection.style.display = 'none';
+    if (guideSection) guideSection.style.display = 'none';
+
+    if (navOverview) navOverview.classList.remove('active');
+    if (navGuide) navGuide.classList.remove('active');
+
+    if (sectionToShow) sectionToShow.style.display = 'block';
+    if (activeNav) activeNav.classList.add('active');
+}
+
+// Initial Population & Nav Setup
+document.addEventListener('DOMContentLoaded', () => {
+    populateSeriesFilter();
+    updateDisplay();
+
+    // Setup navigation events after DOM is loaded
+    if (navOverview && navGuide && overviewSection && guideSection) {
+        navOverview.addEventListener('click', (e) => {
+            e.preventDefault();
+            showSection(overviewSection, navOverview);
+        });
+
+        navGuide.addEventListener('click', (e) => {
+            e.preventDefault();
+            showSection(guideSection, navGuide);
+        });
+        // Initial state (overview shown, guide hidden) should be set by HTML/CSS
+        // but if not, uncomment:
+        // showSection(overviewSection, navOverview);
+    } else {
+        // console.error("Navigation elements or sections not found for event setup."); // Optional
+    }
+});
+    </script>
 </body>
 </html>
